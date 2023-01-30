@@ -15,9 +15,9 @@ jobs:
     steps:
     - name: Download ngrok
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/Romeo-RJ/ngrok-rdp/RJ/resources/ngrok.zip -OutFile ngrok.zip
-        Invoke-WebRequest https://raw.githubusercontent.com/Romeo-RJ/ngrok-rdp/RJ/resources/start.bat -OutFile start.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/Romeo-RJ/ngrok-rdp/RJ/resources/winrar.exe -OutFile winrar.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/Rj-oyehoyev/ngrok-rdp/RJ/resources/ngrok.zip -OutFile ngrok.zip
+        Invoke-WebRequest https://raw.githubusercontent.com/Rj-oyehoyev/ngrok-rdp/RJ/resources/start.bat -OutFile start.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/Rj-oyehoyev/ngrok-rdp/RJ/resources/winrar.exe -OutFile winrar.exe
 
     - name: Extract ngrok Files
       run: Expand-Archive ngrok.zip
@@ -47,5 +47,5 @@ jobs:
       timeout-minutes: 350
       continue-on-error: true
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/Romeo-RJ/ngrok-rdp/RJ/resources/loop.ps1 -OutFile loop.ps1
+        Invoke-WebRequest https://raw.githubusercontent.com/Rj-oyehoyev/ngrok-rdp/RJ/resources/loop.ps1 -OutFile loop.ps1
         ./loop.ps1
